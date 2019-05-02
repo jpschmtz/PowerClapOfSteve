@@ -36,12 +36,12 @@ const DisplayLinks = props => {
 					</li>
 					<li className="nav-item">
 						<Link to="/login" className="nav-link">
-							login
+							Login
 						</Link>
 					</li>
 					<li className="nav-item">
 						<Link to="/signup" className="nav-link">
-							sign up
+							Sign Up
 						</Link>
 					</li>
 				</ul>
@@ -113,7 +113,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>This is the main App component</h1>
+				<h1>Code Loop</h1>
+				<h2>Developing Developers</h2>
 				<Header user={this.state.user} />
 				{/* LINKS to our different 'pages' */}
 				<DisplayLinks _logout={this._logout} loggedIn={this.state.loggedIn} />
