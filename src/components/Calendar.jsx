@@ -65,7 +65,7 @@ const Calendar = props => {
 			<div className="Calendar">
 				<p>Current User:</p>
 				<Meetups
-				    apiKey={apiKey}
+				  apiKey={apiKey}
 					meetupsIds={meetupsIds}
 					render={renderMeetups}
 					loading={() => <div>Loading...</div>}
@@ -78,7 +78,7 @@ const Calendar = props => {
 				<p>Tech Meetups Near You:</p>
 				<code>
 				<Meetups
-				    apiKey={apiKey}
+				  apiKey={apiKey}
 					meetupsIds={meetupsIds}
 					render={renderMeetups}
 					loading={() => <div>Loading...</div>}
