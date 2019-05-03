@@ -6,6 +6,9 @@ import LoginForm from './components/Login/LoginForm'
 import SignupForm from './components/SignupForm'
 import Header from './components/Header'
 import Home from './components/Home'
+import Fourm from './components/Fourm'
+import Calendar from './components/Calendar'
+import News from './components/News'
 
 const DisplayLinks = props => {
 	if (props.loggedIn) {
@@ -36,12 +39,27 @@ const DisplayLinks = props => {
 					</li>
 					<li className="nav-item">
 						<Link to="/login" className="nav-link">
-							login
+							Login
 						</Link>
 					</li>
 					<li className="nav-item">
 						<Link to="/signup" className="nav-link">
-							sign up
+							Sign Up
+						</Link>
+					</li>
+					<li className="nav-item">
+						<Link to="/calendar" className="nav-link">
+							Calendar
+						</Link>
+					</li>
+					<li className="nav-item">
+						<Link to="/fourm" className="nav-link">
+							Fourm
+						</Link>
+					</li>
+					<li className="nav-item">
+						<Link to="/news" className="nav-link">
+							News
 						</Link>
 					</li>
 				</ul>
@@ -130,6 +148,10 @@ class App extends Component {
 						/>}
 				/>
 				<Route exact path="/signup" component={SignupForm} />
+				<Route exact path="/calendar" component={Calendar} />
+				<Route exact path="/news" component={News} />
+				<Route exact path="/forum" component={Fourm} />
+
 				{/* <LoginForm _login={this._login} /> */}
 			</div>
 		)
