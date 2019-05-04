@@ -8,7 +8,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Fourm from './components/Fourm'
 import Calendar from './components/Calendar'
-import News from './components/News'
+import News from './components/News.jsx'
 
 const DisplayLinks = props => {
 	if (props.loggedIn) {

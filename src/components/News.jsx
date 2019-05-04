@@ -1,5 +1,6 @@
 import React from 'react'
-// TODO - add proptypes
+// Grab the articles as a json
+import Scrape from './scrape'
 
 const News = props => {
 	if (props.user) {
@@ -7,7 +8,8 @@ const News = props => {
 			<div className="News">
 				<p>Current User:</p>
 				<code>
-					{JSON.stringify(props)}
+				{/* <Article/>
+				<Note/> */}
 				</code>
 			</div>
 		)
@@ -16,7 +18,7 @@ const News = props => {
 			<div className="News">
 				<p>Current User:</p>
 				<code>
-					{JSON.stringify(props)}
+					<Scrape/>
 				</code>
 			</div>
 		)
