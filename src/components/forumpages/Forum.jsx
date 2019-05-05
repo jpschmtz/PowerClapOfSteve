@@ -1,44 +1,51 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './forum.css'
+
 // TODO - add proptypes
 
 class Forum extends Component {
 	render() {
 		return (
 			<div className="forumWrapper">
-				<div className = "forumWelcome">
-					Welcome to ______'s forum! Here, you have an opportunity to share your thoughts on the industry, resources to help out other developers, and showcase your apps!
+				<div id = "forumWelcome">
+				<h1>HELLO DEVELOPERS!</h1>
+				Welcome to ______'s forum! Here, you have an opportunity to share your thoughts on the industry, resources to help out other developers, and showcase your work!
+				
+
+				
 				</div>
-				<div className="topic">
-					<Link to="/Announcements" className="forumTopic">
-						Announcements
-					</Link>
-					<p className = "topicDescription">Check here for any announcements for ______</p>
-				</div>
-				<div className="topic">
-					<Link to="/General" className="forumTopic">
-						General
-					</Link>
-					<p className = "topicDescription">A place for you to talk about whatever you want!</p>
-				</div>
-				<div className="topic">
-					<Link to="/Thoughts" className="forumTopic">
-						Thoughts
-					</Link>
-					<p className = "topicDescription">Share your thoughts regarding anything and everything web development</p>
-				</div>
-				<div className="topic">
-					<Link to="/Resources" className="forumTopic">
-						Resources
-					</Link>
-					<p className = "topicDescription">Have any resources that helped you get through a difficult project? Share them with the community!</p>
-				</div>
-				<div className="topic">
-					<Link to="/Applications" className="forumTopic">
-						Applications
-					</Link>
-					<p className = "topicDescription">Need advice or critique on your projects? Post them here and get feedback from the community!</p>
+				<div id="topicsWrapper">
+					<div className="topic">
+						<Link to="/Announcements" className="forumTopic">
+							Announcements
+						</Link>
+						<p className = "topicDescription">Check here for any announcements for ______</p>
+					</div>
+					<div className="topic">
+						<Link to="/General" className="forumTopic">
+							General
+						</Link>
+						<p className = "topicDescription">A place for you to talk about whatever you want!</p>
+					</div>
+					<div className="topic">
+						<Link to="/Thoughts" className="forumTopic">
+							Thoughts
+						</Link>
+						<p className = "topicDescription">Share your thoughts regarding anything and everything web development</p>
+					</div>
+					<div className="topic">
+						<Link to="/Resources" className="forumTopic">
+							Resources
+						</Link>
+						<p className = "topicDescription">Have any resources that helped you get through a difficult project? Share them with the community!</p>
+					</div>
+					<div className="topic">
+						<Link to="/Applications" className="forumTopic">
+							Applications
+						</Link>
+						<p className = "topicDescription">Need advice or critique on your projects? Post them here and get feedback from the community!</p>
+					</div>
 				</div>
 			</div>
 		)

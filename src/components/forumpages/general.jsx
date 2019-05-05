@@ -4,12 +4,12 @@ import './announcements.css'
 import Post from './announcementsposts/component/posts'
 // TODO - add proptypes
 
-class announcements extends Component {
+class general extends Component {
     constructor(props) {
         super(props)
 
 		this.state = {
-            posts: ["its connected"],
+            posts: ["General is connected"],
             newPostBody: '',
 		}
         this.addPost = this.addPost.bind(this)
@@ -35,7 +35,7 @@ class announcements extends Component {
 		return (
 			<div className="forumWrapper">
                 <div className = "topicIntro">
-                    <h2>_______ Announcements!</h2>
+                    <h2>Testing General Forum</h2>
                     <p>List future builds here!</p>
                 </div>
 				<div className = "forumAnnouncements">
@@ -57,4 +57,4 @@ class announcements extends Component {
 }
 
 
-export default announcements
+export default general;
