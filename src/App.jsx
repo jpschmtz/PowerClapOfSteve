@@ -6,7 +6,8 @@ import LoginForm from './components/Login/LoginForm'
 import SignupForm from './components/SignupForm'
 import Header from './components/Header'
 import Home from './components/Home'
-import Fourm from './components/Fourm'
+import Forum from './components/forumpages/Forum'
+import announcements from './components/forumpages/announcements'
 import Calendar from './components/Calendar'
 import News from './components/News.jsx'
 
@@ -53,8 +54,8 @@ const DisplayLinks = props => {
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/fourm" className="nav-link">
-							Fourm
+						<Link to="/forum" className="nav-link">
+							Forum
 						</Link>
 					</li>
 					<li className="nav-item">
@@ -131,6 +132,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
+
 				<h1>This is the main App component</h1>
 				<Header user={this.state.user} />
 				{/* LINKS to our different 'pages' */}
@@ -150,9 +152,11 @@ class App extends Component {
 				<Route exact path="/signup" component={SignupForm} />
 				<Route exact path="/calendar" component={Calendar} />
 				<Route exact path="/news" component={News} />
-				<Route exact path="/forum" component={Fourm} />
+				<Route exact path="/forum" component={Forum} />
+				<Route exact path="/announcements" component={announcements} />
 
 				{/* <LoginForm _login={this._login} /> */}
+
 			</div>
 		)
 	}
