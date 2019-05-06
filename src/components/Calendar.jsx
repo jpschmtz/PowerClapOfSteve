@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import Meetups from "react-meetup-meetups";
 
 // TODO - add proptypes
@@ -63,13 +63,14 @@ const Calendar = props => {
 	if (props.user) {
 		return (
 			<div className="Calendar">
-				<p>Current User:</p>
+				<p>Tech Meetups Near You:</p>
+				<code>
 				<Meetups
 				  apiKey={apiKey}
 					meetupsIds={meetupsIds}
 					render={renderMeetups}
 					loading={() => <div>Loading...</div>}
-				/>
+				/>				</code>
 			</div>
 		)
 	} else {

@@ -39,7 +39,7 @@ app.use(express.static("public"));
 
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/PowerClapOfSteve", { useNewUrlParser: true });
 var results = [];
 
 // Routes
@@ -48,7 +48,7 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-// A GET route for scraping the echoJS website
+// A GET route for scraping the TechCrunch website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
   axios.get("https://techcrunch.com/").then(function(response) {
@@ -137,5 +137,5 @@ app.post("/articles/:id", function(req, res) {
 
 // Start the server
 app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
+  console.log("Node App running on port " + PORT + "!");
 });

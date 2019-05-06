@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 // Grab the articles as a json
 // import Scrape from './Scrape'
 
-const News = props => {
-	state = {
+class News extends Component {
+		state = {
 		response: '',
 		post: '',
 		responseToPost: '',
 	  };
 	  
-	componentDidMount(){
-		this.callApi()
-		.then(res => this.setState({ response: res.express }))
+	componentDidMount() {
+		// this.callApi()
+		fetch('http://localhost:8080/scrape')
+		.then(res => {
+			this.setState({ response: res.express });
+			console.log("Here");
+		})
 		.catch(err => console.log(err));
 	}
 
@@ -22,19 +26,27 @@ const News = props => {
 		return body;
 	};
 
-
-	if (props.user) {
+	render(){
+	if (this.props) {
 		return (
-			<div className="News">
-				<p>Current User:</p>
-				<code>
-				{/* <Article/>
-				<Note/> */}
-				</code>
+			<div className="articles">
+				<p>{this.state.response}</p>
+				<form onSubmit={this.handleSubmit}>
+				<p>
+					<strong>Post to Server:</strong>
+				</p>
+				<input
+					type="text"
+					value={this.state.post}
+					onChange={e => this.setState({ post: e.target.value })}
+				/>
+				<button type="submit">Submit</button>
+				</form>
+				<p>{this.state.responseToPost}</p>
 			</div>
 		)
 	} else {
-		
+
 		return (
 			<div className="articles">
 				<p>{this.state.response}</p>
@@ -53,6 +65,7 @@ const News = props => {
 			</div>
 			
 		)
+		}
 	}
 }
 export default News;
