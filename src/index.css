@@ -1,5 +1,33 @@
+html{
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #545558;
+  background-color: #10455b;
+  height: 100%;
+}
+
+#root{
+  width: 100%;
+  min-height: 100%;
+  max-width: 960px;
+  margin: auto;
+  clear: both;
+  padding: 10px 25px;
+  background-color: white;
+  overflow:auto;
+  flex: 1
+}
+
+h1,h2,h3{
+  color:#10455b;
+  padding: 10px 0px 10px 0px;
+}
+
+a {
+  color: #2aa1af;
 }

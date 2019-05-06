@@ -4,14 +4,15 @@ import { Route, Link } from 'react-router-dom'
 import './App.css'
 import LoginForm from './components/Login/LoginForm'
 import SignupForm from './components/SignupForm'
-import Header from './components/Header'
+//import Header from './components/Header'
 import Home from './components/Home'
-import Fourm from './components/Fourm'
+import Forum from './components/forumpages/Forum'
+import announcements from './components/forumpages/announcements'
+import general from './components/forumpages/general'
 import Calendar from './components/Calendar'
 import News from './components/News.jsx'
 
 const DisplayLinks = props => {
-	if (props.loggedIn) {
 		return (
 			<nav className="navbar">
 				<ul className="nav">
@@ -20,21 +21,19 @@ const DisplayLinks = props => {
 							Home
 						</Link>
 					</li>
-					<li>
-						<Link to="#" className="nav-link" onClick={props._logout}>
-							Logout
+					<li className="nav-item">
+						<Link to="/news" className="nav-link">
+							News
 						</Link>
 					</li>
-				</ul>
-			</nav>
-		)
-	} else {
-		return (
-			<nav className="navbar">
-				<ul className="nav">
 					<li className="nav-item">
-						<Link to="/" className="nav-link">
-							Home
+						<Link to="/calendar" className="nav-link">
+							Events Calendar
+						</Link>
+					</li>
+					<li className="nav-item">
+						<Link to="/forum" className="nav-link">
+							Forum
 						</Link>
 					</li>
 					<li className="nav-item">
@@ -47,26 +46,11 @@ const DisplayLinks = props => {
 							Sign Up
 						</Link>
 					</li>
-					<li className="nav-item">
-						<Link to="/calendar" className="nav-link">
-							Calendar
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/fourm" className="nav-link">
-							Fourm
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/news" className="nav-link">
-							News
-						</Link>
-					</li>
 				</ul>
 			</nav>
 		)
 	}
-}
+
 
 class App extends Component {
 	constructor() {
@@ -131,13 +115,16 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>This is the main App component</h1>
-				<Header user={this.state.user} />
+
+				{/* <h1>This is the main App component</h1> */}
+				{/* <Header user={this.state.user} /> */}
 				{/* LINKS to our different 'pages' */}
 				<DisplayLinks _logout={this._logout} loggedIn={this.state.loggedIn} />
 				{/*  ROUTES */}
 				{/* <Route exact path="/" component={Home} /> */}
-				<Route exact path="/" render={() => <Home user={this.state.user} />} />
+				{/* <Route exact path="/" render={() => <Home user={this.state.user} />} /> */}
+				<Route exact path="/" component={Home} />
+
 				<Route
 					exact
 					path="/login"
@@ -150,9 +137,11 @@ class App extends Component {
 				<Route exact path="/signup" component={SignupForm} />
 				<Route exact path="/calendar" component={Calendar} />
 				<Route exact path="/news" component={News} />
-				<Route exact path="/forum" component={Fourm} />
-
+				<Route exact path="/forum" component={Forum} />
+				<Route exact path="/announcements" component={announcements} />
+				<Route exact path="/general" component={general} />
 				{/* <LoginForm _login={this._login} /> */}
+
 			</div>
 		)
 	}

@@ -1,0 +1,19 @@
+.topic{
+    padding-top: 5px;
+    border-bottom: 2px solid #2c637a;
+}
+.forumTopic{
+
+    font-size: 20px;
+}
+#topicsWrapper{
+    padding-top: 5px;
+
+}
+.topicDescription{
+    font-size: 15px;
+}
+
+#forumWelcome{
+    padding: 100px 50px 100px 50px;
+}

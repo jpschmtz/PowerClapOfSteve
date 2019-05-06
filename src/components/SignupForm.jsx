@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import "./signup.css";
 
 class SignupForm extends Component {
 	constructor() {
@@ -44,30 +45,40 @@ class SignupForm extends Component {
 			return <Redirect to={{ pathname: this.state.redirectTo }} />
 		}
 		return (
-			<div className="SignupForm">
-				<h1>Signup form</h1>
-				<label htmlFor="username">Username: </label>
-				<input
-					type="text"
-					name="username"
-					value={this.state.username}
-					onChange={this.handleChange}
-				/>
-				<label htmlFor="password">Password: </label>
-				<input
-					type="password"
-					name="password"
-					value={this.state.password}
-					onChange={this.handleChange}
-				/>
-				<label htmlFor="confirmPassword">Confirm Password: </label>
-				<input
-					type="password"
-					name="confirmPassword"
-					value={this.state.confirmPassword}
-					onChange={this.handleChange}
-				/>
-				<button onClick={this.handleSubmit}>Sign up</button>
+			<div className="formWrapper">
+				<div className="SignupForm">
+					<h1>Signup form</h1>
+
+					<input
+						className = "formInput"
+						name="firstName"
+						type="text"
+						placeholder="First Name"
+					/>
+          			<input
+					  	className = "formInput"
+						name="lastName"
+						type="text"
+						placeholder="Last Name"
+          			/>
+					<input
+						className = "formInput"
+						type="text"
+						name="email"
+						placeholder="Email Address"
+						value={this.state.email}
+						onChange={this.handleChange}
+					/>
+					<input
+						className = "formInput"
+						type="password"
+						name="password"
+						placeholder="Password"
+						value={this.state.password}
+						onChange={this.handleChange}
+					/>
+					<button onClick={this.handleSubmit}>Sign up</button>
+				</div>
 			</div>
 		)
 	}
