@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 // Grab the articles as a json
 // import Scrape from './Scrape'
 
 class News extends Component {
-		state = {
-		response: '',
-		post: '',
-		responseToPost: '',
-	  };
+	constructor(){
+		super();
+		this.state ={
+			scrape : {},
+		}
+	}
+	// 	state = {
+	// 	response: '',
+	// 	post: '',
+	// 	responseToPost: '',
+	//   };
 	  
 	componentDidMount() {
 		// this.callApi()
-		fetch('http://localhost:8080/scrape')
-		.then(res => {
-			this.setState({ response: res.express });
-			console.log("Here");
+		console.log('in here')
+		// fetch('http://localhost:8080/scrape')
+		// .then(response => 
+		// 	{ console.log("response")
+		// 		response.json()
+		// 	})
+		// .then(data => this.setState({ data }));
+
+		axios.get('http://localhost:8080/scrape').then((res)=>{
+			console.log(res)
 		})
-		.catch(err => console.log(err));
 	}
 
 	callApi = async () => {
-		const response = await fetch('/scrape');
+		const response = await fetch('http://localhost:8080/scrape');
 		const body = await response.json();
 		if (response.status !== 200) throw Error(body.message);
 		return body;
