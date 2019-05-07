@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './forum.css'
+import Image from '../../Assets/Forum.jpg'
 
 // TODO - add proptypes
 
@@ -8,13 +9,14 @@ class Forum extends Component {
 	render() {
 		return (
 			<div className="forumWrapper">
-				<div id = "forumWelcome">
-				<h1>HELLO DEVELOPERS!</h1>
-				Welcome to ______'s forum! Here, you have an opportunity to share your thoughts on the industry, resources to help out other developers, and showcase your work!
-				
-
-				
+			<div>
+				<div id="intro">
+					<img className="bannerImage" src={Image}/>
 				</div>
+				<div id="introCard">
+					<h1>something</h1>
+				</div>
+			</div>
 				<div id="topicsWrapper">
 					<div className="topic">
 						<Link to="/Announcements" className="forumTopic">

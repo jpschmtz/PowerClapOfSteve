@@ -17,7 +17,7 @@ body {
   max-width: 960px;
   margin: auto;
   clear: both;
-  padding: 10px 25px;
+  padding: 10px 0px;
   background-color: white;
   overflow:auto;
   flex: 1
@@ -25,9 +25,33 @@ body {
 
 h1,h2,h3{
   color:#10455b;
-  padding: 10px 0px 10px 0px;
+  /* padding: 10px 0px 10px 0px; */
 }
 
 a {
   color: #2aa1af;
+}
+
+.bannerImage{
+  width: 100%;
+  opacity: .95;
+
+}
+#introCard{
+    text-align: center;
+    background: #F9F9F9;
+    width: 350px;
+    height: 125px;
+    position: absolute;
+    color:  #67888d;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    opacity: .85;
+    padding:10px 0px 10px 0px;
+}
+
+#introParagraph{
+  padding: 25px;
 }
