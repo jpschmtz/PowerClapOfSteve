@@ -69,6 +69,7 @@ app.get("/scrape", function(req, res) {
       result.title = $(this)
         .children("a")
         .text();
+      result.title = result.title.replace(/(\r\n|\n|\r|\t)/gm,"");
       result.link = $(this)
         .children("a")
         .attr("href");

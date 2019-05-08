@@ -7,7 +7,7 @@ class News extends Component {
 	constructor(){
 		super();
 		this.state ={
-			scrape : {},
+			scrape : [],
 		}
 	}
 	// 	state = {
@@ -17,14 +17,6 @@ class News extends Component {
 	//   };
 	  
 	componentDidMount() {
-		// this.callApi()
-		// console.log('in here')
-		// fetch('http://localhost:8080/scrape')
-		// .then(response => 
-		// 	{ console.log("response")
-		// 		response.json()
-		// 	})
-		// .then(data => this.setState({ data }));
 
 		axios.get('http://localhost:8080/scrape')
 		.then(result=>{
@@ -32,43 +24,39 @@ class News extends Component {
 			return result;
 		})
 		.then(data => {
-			console.log(data);
-			let scrape = data.data.map((scrape) => {
+			// console.log(data);
+			let index =0;
+			let scrape = data.data.map((res) => {
+				index ++ ;
+				// console.log(res.title);
+				// console.log(res.link);
+				// console.log(index);
 				return(
-					<div key={scrape.result}>
-						<a href={scrape.data}>Link</a>
+					<div key= {index.toString()} >
+						{/* <p>
+						{res.title}
+						</p> */}
+						<a href={res.link}>{res.title}</a>
 					</div>
 				)
 			})
 			this.setState({scrape: scrape});
-			console.log("state", this.state.scrape);
+			// console.log("state", this.state.scrape);
 		})
 	}
 
-	callApi = async () => {
-		const response = await fetch('http://localhost:8080/scrape');
-		const body = await response.json();
-		if (response.status !== 200) throw Error(body.message);
-		return body;
-	};
-
 	render(){
-	if (this.props) {
+		// console.log("Here", this.state.scrape);
+	if (this) {
+		console.log("Here", this.state.scrape);
 		return (
 			<div className="articles">
-				<p>{this.state.response}</p>
-				<form onSubmit={this.handleSubmit}>
 				<p>
-					<strong>Post to Server:</strong>
+					<strong>News:</strong>
 				</p>
-				<input
-					type="text"
-					value={this.state.post}
-					onChange={e => this.setState({ post: e.target.value })}
-				/>
-				<button type="submit">Submit</button>
-				</form>
-				<p>{this.state.responseToPost}</p>
+				
+				{this.state.scrape}
+				
 			</div>
 		)
 	} else {
