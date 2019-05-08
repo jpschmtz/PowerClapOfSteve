@@ -18,7 +18,7 @@ class News extends Component {
 	  
 	componentDidMount() {
 		// this.callApi()
-		console.log('in here')
+		// console.log('in here')
 		// fetch('http://localhost:8080/scrape')
 		// .then(response => 
 		// 	{ console.log("response")
@@ -26,8 +26,22 @@ class News extends Component {
 		// 	})
 		// .then(data => this.setState({ data }));
 
-		axios.get('http://localhost:8080/scrape').then((res)=>{
-			console.log(res)
+		axios.get('http://localhost:8080/scrape')
+		.then(result=>{
+			// console.log(result);
+			return result;
+		})
+		.then(data => {
+			console.log(data);
+			let scrape = data.data.map((scrape) => {
+				return(
+					<div key={scrape.result}>
+						<a href={scrape.data}>Link</a>
+					</div>
+				)
+			})
+			this.setState({scrape: scrape});
+			console.log("state", this.state.scrape);
 		})
 	}
 
