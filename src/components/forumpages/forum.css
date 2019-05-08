@@ -7,29 +7,46 @@
     font-size: 20px;
 }
 #topicsWrapper{
-    padding: 10px;
+    padding: 25px;
 
 }
 .topicDescription{
     font-size: 15px;
 }
+#bannerDiv{
+    margin:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border:0px;
+    padding: 0px;
+    position: relative;
 
+}
+#intro{
+    margin:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border:0px;
+    padding: 0px;
+    
+}
 .bannerImage{
     width: 100%;
     opacity: .95;
-  
+
 }
 #introCard{
     text-align: center;
-    background: #F9F9F9;
+    background: rgb(249,249,249, .90);
     width: 350px;
     height: 125px;
-    position: absolute;
     color:  #67888d;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 12px;
-    opacity: .85;
-    padding:10px 0px 10px 0px;
+    padding:10px;
+    position: absolute;
 }

@@ -6,14 +6,19 @@ class Home extends Component {
 	render() {
 		return (
 			<div>
-				<div id="intro">
-					<img className="bannerImage" src={Image}/>
-				</div>
-				<div id="introCard">
-					<h1>Hello Developers!</h1>
-					<h2>Welcome to AppName</h2>
-				</div>
-			
+				
+					<div id="bannerDiv">
+						<div id="intro">
+						<img className="bannerImage" src={Image}/>
+						</div>
+
+						<div id="introCard">
+						<h1>Hello Developers!</h1>
+						<h2>Welcome to AppName</h2>
+						</div>
+					</div>
+
+
 
 				<div id="introParagraph">
 					<p>As Developers, it is important to continuously sharpen your skills. Here at _________ it makes it

@@ -16,6 +16,7 @@ const DisplayLinks = props => {
 		return (
 			<nav className="navbar">
 				<ul className="nav">
+				<li id="logo">App name here</li>
 					<li className="nav-item">
 						<Link to="/" className="nav-link">
 							Home
@@ -45,7 +46,7 @@ const DisplayLinks = props => {
 						<Link to="/signup" className="nav-link">
 							Sign Up
 						</Link>
-					</li>
+					</li> 
 				</ul>
 			</nav>
 		)

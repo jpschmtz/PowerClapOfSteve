@@ -36,7 +36,15 @@ class announcements extends Component {
 			<div className="forumWrapper">
                 <div className = "topicIntro">
                     <h2>_______ Announcements!</h2>
-                    <p>List future builds here!</p>
+                    Hello All, 
+                    <p>We want to make sure that our community is up to date with the future plans. Over the upcomming months
+                        we will be making a few changes to improve your experience with our app.
+                    </p>
+                    <ul>
+                        <li></li>
+                    </ul>
+
+                    If you have any reccomendations on we can improve out up, please let us know below!
                 </div>
 				<div className = "forumAnnouncements">
 
