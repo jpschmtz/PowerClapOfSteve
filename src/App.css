@@ -18,3 +18,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.navbar{
+  width:100%
+}
+#logo{
+  float:left;
+}
+.nav{
+  float:right;
+}

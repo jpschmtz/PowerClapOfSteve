@@ -9,20 +9,28 @@ class Forum extends Component {
 	render() {
 		return (
 			<div className="forumWrapper">
-			<div>
-				<div id="intro">
+
+				<div id="bannerDiv">
+					<div id="intro">
 					<img className="bannerImage" src={Image}/>
+					<div id="introCard">
+					<h1>Forum</h1>
+					</div>
+					</div>
 				</div>
-				<div id="introCard">
-					<h1>something</h1>
-				</div>
-			</div>
+
 				<div id="topicsWrapper">
 					<div className="topic">
 						<Link to="/Announcements" className="forumTopic">
 							Announcements
 						</Link>
 						<p className = "topicDescription">Check here for any announcements for ______</p>
+					</div>
+					<div className="topic">
+						<Link to="/Resources" className="forumTopic">
+							Resources
+						</Link>
+						<p className = "topicDescription">Have any resources that helped you get through a difficult project? Share them with the community!</p>
 					</div>
 					<div className="topic">
 						<Link to="/General" className="forumTopic">
@@ -35,12 +43,6 @@ class Forum extends Component {
 							Thoughts
 						</Link>
 						<p className = "topicDescription">Share your thoughts regarding anything and everything web development</p>
-					</div>
-					<div className="topic">
-						<Link to="/Resources" className="forumTopic">
-							Resources
-						</Link>
-						<p className = "topicDescription">Have any resources that helped you get through a difficult project? Share them with the community!</p>
 					</div>
 					<div className="topic">
 						<Link to="/Applications" className="forumTopic">
