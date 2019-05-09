@@ -4,19 +4,15 @@ import axios from 'axios';
 // import Scrape from './Scrape'
 
 class News extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state ={
 			scrape : [],
-			save : false,
+			// save : false,
 		}
 		this.save = this.save.bind(this);
 	}
-	// 	state = {
-	// 	response: '',
-	// 	post: '',
-	// 	responseToPost: '',
-	//   };
+
 	save(index) {
 		console.log(index.value);
 		console.log(this.state.scrape);
@@ -43,12 +39,8 @@ class News extends Component {
 				// console.log(index);
 				return(
 					<div key= {index.toString()} >
-					{/* // <div key= {res.key} > */}
-						{/* <p>
-						{res.title}
-						</p> */}
 						<a href={res.link}>{res.title}</a>
-						<button value= {index} onClick={()=>this.save({index})} className="btn btn-primary">Save</button>
+						<button value= {index} onClick={()=>console.log(this.state.scrape[2].key)} className="btn btn-primary">Save</button>
 					</div>
 				)
 			})
