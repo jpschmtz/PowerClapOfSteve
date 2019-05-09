@@ -1,6 +1,7 @@
 import React from 'react'
 // import { render } from "react-dom";
 import Meetups from "react-meetup-meetups";
+import Image from '../Assets/Meetup2.jpg'
 
 // TODO - add proptypes
 
@@ -63,6 +64,18 @@ const Calendar = props => {
 	if (props.user) {
 		return (
 			<div className="Calendar">
+
+<div id="bannerDiv">
+						<div id="intro">
+						  <img className="bannerImage" alt="welcomeImage" src={Image}/>
+						</div>
+
+						<div id="introCard">
+						  <h1>Hello Developers!</h1>
+						  <h2>Welcome to AppName</h2>
+						</div>
+					</div>
+
 				<p>Tech Meetups Near You:</p>
 				<code>
 				<Meetups
@@ -76,6 +89,18 @@ const Calendar = props => {
 	} else {
 		return (
 			<div className="Calendar">
+
+          <div id="bannerDiv">
+						<div id="intro">
+						  <img className="bannerImage" alt="welcomeImage" src={Image}/>
+						</div>
+
+						<div id="introCard">
+						  <h1>Hello Developers!</h1>
+						  <h2>Welcome to AppName</h2>
+						</div>
+					</div>
+
 				<p>Tech Meetups Near You:</p>
 				<code>
 				<Meetups

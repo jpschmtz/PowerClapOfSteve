@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 // import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_disabled_web.png'
 import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png'
 import "../signup.css";
+import Image from '../../Assets/login2.jpg'
 
 class LoginForm extends Component {
 	constructor() {
@@ -37,6 +38,17 @@ class LoginForm extends Component {
 			return <Redirect to={{ pathname: this.state.redirectTo }} />
 		} else {
 			return (
+			<div>
+				<div id="bannerDiv">
+				<div id="intro">
+				<img className="bannerImage" alt="Login Banner" src={Image}/>
+				</div>
+
+				<div id="introCard">
+				<h1>Login</h1>
+				<h2>Welcome to AppName</h2>
+				</div>
+			</div>
 				<div className="formWrapper">
 				<div className="LoginForm">
 					<h1>Login form</h1>
@@ -64,6 +76,7 @@ class LoginForm extends Component {
 						{/* <GoogleButton /> */}
 						<img src={googleButton} alt="sign into Google Button" />
 					</a>
+				</div>
 				</div>
 				</div>
 			)

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './forum.css'
-import Image from '../../Assets/Forum.jpg'
+import Image from '../../Assets/Forum2.jpg'
 
 // TODO - add proptypes
 
@@ -12,7 +12,7 @@ class Forum extends Component {
 
 				<div id="bannerDiv">
 					<div id="intro">
-					<img className="bannerImage" src={Image}/>
+					<img className="bannerImage" alt="forumImage" src={Image}/>
 					<div id="introCard">
 					<h1>Forum</h1>
 					</div>

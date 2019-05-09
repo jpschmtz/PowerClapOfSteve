@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import "./signup.css";
+import Image from '../Assets/signup2.jpg'
 
 class SignupForm extends Component {
 	constructor() {
@@ -45,6 +46,15 @@ class SignupForm extends Component {
 			return <Redirect to={{ pathname: this.state.redirectTo }} />
 		}
 		return (
+			<div>
+								<div id="bannerDiv">
+					<div id="intro">
+					<img className="bannerImage" alt="forumImage" src={Image}/>
+					<div id="introCard">
+					<h1>Forum</h1>
+					</div>
+					</div>
+				</div>
 			<div className="formWrapper">
 				<div className="SignupForm">
 					<h1>Signup form</h1>
@@ -79,6 +89,7 @@ class SignupForm extends Component {
 					/>
 					<button onClick={this.handleSubmit}>Sign up</button>
 				</div>
+			</div>
 			</div>
 		)
 	}
