@@ -26,17 +26,20 @@ class News extends Component {
 		.then(data => {
 			// console.log(data);
 			let index =0;
-			let scrape = data.data.map((res) => {
+			let subData = data.data.slice(1,10);
+			let scrape = subData.map((res) => {
 				index ++ ;
 				// console.log(res.title);
 				// console.log(res.link);
 				// console.log(index);
 				return(
 					<div key= {index.toString()} >
+					{/* // <div key= {res.key} > */}
 						{/* <p>
 						{res.title}
 						</p> */}
 						<a href={res.link}>{res.title}</a>
+						<button onClick={this.save} className="btn btn-primary">Save</button>
 					</div>
 				)
 			})
@@ -48,11 +51,11 @@ class News extends Component {
 	render(){
 		// console.log("Here", this.state.scrape);
 	if (this) {
-		console.log("Here", this.state.scrape);
+		// console.log("Here", this.state.scrape);
 		return (
 			<div className="articles">
 				<p>
-					<strong>News:</strong>
+					<strong>Latest Coding News Heading:</strong>
 				</p>
 				
 				{this.state.scrape}
