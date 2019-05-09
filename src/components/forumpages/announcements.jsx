@@ -41,7 +41,10 @@ class announcements extends Component {
                         we will be making a few changes to improve your experience with our app.
                     </p>
                     <ul>
-                        <li></li>
+                        <li>New Feature</li>
+                        <li>New Feature</li>
+                        <li>New Feature</li>
+                        <li>New Feature</li>
                     </ul>
 
                     If you have any reccomendations on we can improve out up, please let us know below!

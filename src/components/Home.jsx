@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Image from '../Assets/welcome.jpg'
+import Image from '../Assets/welcome2.jpg'
 import "../index.css";
 
 class Home extends Component {
@@ -9,12 +9,12 @@ class Home extends Component {
 				
 					<div id="bannerDiv">
 						<div id="intro">
-						<img className="bannerImage" src={Image}/>
+						<img className="bannerImage" alt="welcomeImage" src={Image}/>
 						</div>
 
 						<div id="introCard">
 						<h1>Hello Developers!</h1>
-						<h2>Welcome to AppName</h2>
+						<h4>Welcome to Continue to Code!</h4>
 						</div>
 					</div>
 
