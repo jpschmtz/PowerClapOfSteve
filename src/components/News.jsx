@@ -5,18 +5,23 @@ import Image from '../Assets/news2.jpg'
 // import Scrape from './Scrape'
 
 class News extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state ={
 			scrape : [],
+			// save : false,
 		}
+		this.save = this.save.bind(this);
 	}
-	// 	state = {
-	// 	response: '',
-	// 	post: '',
-	// 	responseToPost: '',
-	//   };
-	  
+
+	save(index) {
+		console.log(index.value);
+		console.log(this.state.scrape);
+		this.setState(state => ({
+		  save: true
+		}));
+	  }
+
 	componentDidMount() {
 
 		axios.get('http://localhost:8080/scrape')
@@ -35,12 +40,8 @@ class News extends Component {
 				// console.log(index);
 				return(
 					<div key= {index.toString()} >
-					{/* // <div key= {res.key} > */}
-						{/* <p>
-						{res.title}
-						</p> */}
 						<a href={res.link}>{res.title}</a>
-						<button onClick={this.save} className="btn btn-primary">Save</button>
+						<button value= {index} onClick={()=>console.log(this.state.scrape[2].key)} className="btn btn-primary">Save</button>
 					</div>
 				)
 			})
@@ -48,6 +49,9 @@ class News extends Component {
 			// console.log("state", this.state.scrape);
 		})
 	}
+
+	
+	
 
 	render(){
 		// console.log("Here", this.state.scrape)
