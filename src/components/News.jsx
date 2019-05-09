@@ -8,14 +8,23 @@ class News extends Component {
 		super();
 		this.state ={
 			scrape : [],
+			save : false,
 		}
+		this.save = this.save.bind(this);
 	}
 	// 	state = {
 	// 	response: '',
 	// 	post: '',
 	// 	responseToPost: '',
 	//   };
-	  
+	save(index) {
+		console.log(index.value);
+		console.log(this.state.scrape);
+		this.setState(state => ({
+		  save: true
+		}));
+	  }
+
 	componentDidMount() {
 
 		axios.get('http://localhost:8080/scrape')
@@ -39,7 +48,7 @@ class News extends Component {
 						{res.title}
 						</p> */}
 						<a href={res.link}>{res.title}</a>
-						<button onClick={this.save} className="btn btn-primary">Save</button>
+						<button value= {index} onClick={()=>this.save({index})} className="btn btn-primary">Save</button>
 					</div>
 				)
 			})
@@ -47,6 +56,9 @@ class News extends Component {
 			// console.log("state", this.state.scrape);
 		})
 	}
+
+	
+	
 
 	render(){
 		// console.log("Here", this.state.scrape);
