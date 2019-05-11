@@ -49,5 +49,8 @@
   "bugs": {
     "url": "https://github.com/jpschmtz/PowerClapOfSteve/issues"
   },
+  "engines": {
+	"node": "10.13.0"
+  },
   "homepage": "https://github.com/jpschmtz/PowerClapOfSteve#readme"
 }
