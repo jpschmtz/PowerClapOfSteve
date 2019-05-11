@@ -33,13 +33,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-// app.engine(
-//   "handlebars",
-//   exphbs({
-//     defaultLayout: "main"
-//   })
-// );
-// app.set("view engine", "handlebars");
+
 
 
 // Connect to the Mongo DB HEROKU
@@ -63,13 +57,10 @@ app.get("/scrape", function(req, res) {
     var $ = cheerio.load(response.data);
     // var key = 0;
     var result = {};
-    // Now, we grab every h2 within an article tag, and do the following:
+    // Now, we grab every h2 within an body tag, and do the following:
     $("body h2").each(function(i, element) {
       // Save an empty result object
         result = {};
-
-        // db.Article.deleteMany({});
-
       // Add the text and href of every link, and save them as properties of the result object
       result.title = $(this)
         .children("a")
@@ -78,8 +69,7 @@ app.get("/scrape", function(req, res) {
       result.link = $(this)
         .children("a")
         .attr("href");
-      // result.key = key;
-      // key ++;
+
         results.push(result);
       // Create a new Article using the `result` object built from scraping
 
