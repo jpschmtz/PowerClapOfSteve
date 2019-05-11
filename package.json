@@ -29,7 +29,7 @@
   },
   "scripts": {
     "src": "cd src && yarn start",
-    "start": "export NODE_ENV=\"production\" && node server/server.js",
+    "start": "concurrently \"react-scripts start\" \"nodemon server.js\" \"yarn src\"",
     "server": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
