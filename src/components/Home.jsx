@@ -21,8 +21,11 @@ class Home extends Component {
 
 
 				<div id="introParagraph">
-					<p>As Developers, it is important to continuously sharpen your skills. Here at _________ it makes it
-						easy for you to stay up-to-date with the latest technologies and tech news.
+					<p>Unfortunately, a college degree or bootcamp certifiate isn't going to cut it.
+						 As Developers, it is important to continuously sharpen your skills. Employers are willing to take a bet on someone who can learn as 
+						 they go and can persist through the everyday fustrations of being a developer. Here at <i>Continue to Code</i> we it
+						easy for you to stay up-to-date with the latest tech related news, find tech related meetups, and communcate with the <i>Continue to Code </i>
+						 team and other developers via our forum.
 					</p>
 				</div>
 			</div>

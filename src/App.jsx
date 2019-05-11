@@ -11,44 +11,76 @@ import announcements from './components/forumpages/announcements'
 import general from './components/forumpages/general'
 import Calendar from './components/Calendar'
 import News from './components/News.jsx'
+import './Assets/css/hover.css'
 
 const DisplayLinks = props => {
 		return (
-			<nav className="navbar">
-				<ul className="nav">
-				<li id="logo">App name here</li>
-					<li className="nav-item">
-						<Link to="/" className="nav-link">
-							Home
-						</Link>
-					</li>
-					<li className="nav-item">
+			<div id="masterhead">
+
+			<div class="navContainer">
+				<div>
+					<a href="/" id="logo">Continue to Code</a>
+				</div>
+	
+				<div id="navitems">
+							<Link to="/" className="nav-link button hvr-grow">
+			 				Home
+			 			</Link>
+
 						<Link to="/news" className="nav-link">
-							News
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/calendar" className="nav-link">
-							Events Calendar
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/forum" className="nav-link">
-							Forum
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/login" className="nav-link">
-							Login
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/signup" className="nav-link">
-							Sign Up
-						</Link>
-					</li> 
-				</ul>
-			</nav>
+			 				News
+			 			</Link>
+
+			 			<Link to="/calendar" className="nav-link">
+			 				Events Calendar
+			 			</Link>
+
+			 			<Link to="/forum" className="nav-link">
+			 				Forum
+			 			</Link>
+
+			 			<Link to="/login" className="nav-link">
+			 				Login
+			 			</Link>
+
+			 			<Link to="/signup" className="nav-link">
+			 				Sign Up
+			 			</Link>
+				</div>
+			</div>
+	
+		</div>
+
+
+			// <nav className="navbar">
+
+			// 	<li id="logo">Continue to Code</li>
+
+			// 			<Link to="/" className="nav-link">
+			// 				Home
+			// 			</Link>
+
+			// 			<Link to="/news" className="nav-link">
+			// 				News
+			// 			</Link>
+
+			// 			<Link to="/calendar" className="nav-link">
+			// 				Events Calendar
+			// 			</Link>
+
+			// 			<Link to="/forum" className="nav-link">
+			// 				Forum
+			// 			</Link>
+
+			// 			<Link to="/login" className="nav-link">
+			// 				Login
+			// 			</Link>
+
+			// 			<Link to="/signup" className="nav-link">
+			// 				Sign Up
+			// 			</Link>
+
+			// </nav>
 		)
 	}
 
