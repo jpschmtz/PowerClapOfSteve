@@ -12,11 +12,15 @@ var cheerio = require("cheerio");
 
 // Require all models
 var db = require("./models");
-
-var PORT = 8080;
-
 // Initialize Express
 var app = express();
+
+let PORT = process.env.PORT || 8080;
+
+if (process.env.NODE_ENV !== 'production') {
+  app.use(express.static("client/build"));
+}
+
 
 // Configure middleware
 
