@@ -1,7 +1,8 @@
 import React from 'react'
 // import { render } from "react-dom";
 import Meetups from "react-meetup-meetups";
-import Image from '../Assets/Meetup2.jpg'
+import Image from '../Assets/Meetup2.jpg';
+import '../Assets/css/hover.css';
 
 // TODO - add proptypes
 

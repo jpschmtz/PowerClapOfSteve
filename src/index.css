@@ -17,7 +17,7 @@ body {
   max-width: 960px;
   margin: auto;
   clear: both;
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
   background-color: white;
   overflow:auto;
   flex: 1
