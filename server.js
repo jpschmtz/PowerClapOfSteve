@@ -1,7 +1,7 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var request = require("request");
+// var request = require("request");
 var bodyParser = require("body-parser");
 
 // Our scraping tools
