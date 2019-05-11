@@ -50,7 +50,8 @@
     "url": "https://github.com/jpschmtz/PowerClapOfSteve/issues"
   },
   "engines": {
-    "node": "10.13.0"
+    "node": "10.13.0",
+    "yarn": "1.15.2"
   },
   "homepage": "https://github.com/jpschmtz/PowerClapOfSteve#readme"
 }
