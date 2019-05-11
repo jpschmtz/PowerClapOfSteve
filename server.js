@@ -43,7 +43,7 @@ app.use(function(req, res, next) {
 
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/PowerClapOfSteve", { useNewUrlParser: true });
+mongoose.connect("mongodb://Master:Password123@ds155516.mlab.com:55516/heroku_rlf28wdk", { useNewUrlParser: true });
 var results = [];
 
 // Routes
