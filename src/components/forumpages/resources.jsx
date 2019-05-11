@@ -4,7 +4,7 @@ import './announcements.css'
 import Post from './announcementsposts/component/posts'
 // TODO - add proptypes
 
-class announcements extends Component {
+class resources extends Component {
     constructor(props) {
         super(props)
 
@@ -35,19 +35,8 @@ class announcements extends Component {
 		return (
 			<div className="forumWrapper">
                 <div className = "topicIntro">
-                    <h2>_______ Announcements!</h2>
-                    Hello All, 
-                    <p>We want to make sure that our community is up to date with the future plans. Over the upcomming months
-                        we will be making a few changes to improve your experience with our app.
-                    </p>
-                    <ul>
-                        <li>New Feature</li>
-                        <li>New Feature</li>
-                        <li>New Feature</li>
-                        <li>New Feature</li>
-                    </ul>
-
-                    If you have any reccomendations on we can improve out up, please let us know below!
+                    <h2>_______ resources!</h2>
+                    <p>Paragraph about sharing resources</p>
                 </div>
 				<div className = "forumAnnouncements">
 
@@ -68,4 +57,4 @@ class announcements extends Component {
 }
 
 
-export default announcements
+export default resources

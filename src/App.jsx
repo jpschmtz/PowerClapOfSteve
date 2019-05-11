@@ -4,11 +4,13 @@ import { Route, Link } from 'react-router-dom'
 import './App.css'
 import LoginForm from './components/Login/LoginForm'
 import SignupForm from './components/SignupForm'
-//import Header from './components/Header'
 import Home from './components/Home'
 import Forum from './components/forumpages/Forum'
 import announcements from './components/forumpages/announcements'
+import resources from './components/forumpages/resources'
+import thoughts from './components/forumpages/thoughts'
 import general from './components/forumpages/general'
+import sharework from './components/forumpages/sharework'
 import Calendar from './components/Calendar'
 import News from './components/News.jsx'
 import './Assets/css/hover.css'
@@ -23,27 +25,27 @@ const DisplayLinks = props => {
 				</div>
 	
 				<div id="navitems">
-							<Link to="/" className="nav-link button hvr-grow">
+							<Link to="/" className="nav-link button hvr-bob">
 			 				Home
 			 			</Link>
 
-						<Link to="/news" className="nav-link">
+						<Link to="/news" className="nav-link hvr-bob">
 			 				News
 			 			</Link>
 
-			 			<Link to="/calendar" className="nav-link">
+			 			<Link to="/calendar" className="nav-link hvr-bob">
 			 				Events Calendar
 			 			</Link>
 
-			 			<Link to="/forum" className="nav-link">
+			 			<Link to="/forum" className="nav-link hvr-bob">
 			 				Forum
 			 			</Link>
 
-			 			<Link to="/login" className="nav-link">
+			 			<Link to="/login" className="nav-link hvr-bob">
 			 				Login
 			 			</Link>
 
-			 			<Link to="/signup" className="nav-link">
+			 			<Link to="/signup" className="nav-link hvr-bob">
 			 				Sign Up
 			 			</Link>
 				</div>
@@ -172,7 +174,10 @@ class App extends Component {
 				<Route exact path="/news" component={News} />
 				<Route exact path="/forum" component={Forum} />
 				<Route exact path="/announcements" component={announcements} />
+				<Route exact path="/resources" component={resources} />
+				<Route exact path="/thoughts" component={thoughts} />
 				<Route exact path="/general" component={general} />
+				<Route exact path="/sharework" component={sharework} />
 				{/* <LoginForm _login={this._login} /> */}
 
 			</div>
