@@ -7,18 +7,23 @@ import "../Assets/css/hover.css"
 // import Scrape from './Scrape'
 
 class News extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state ={
 			scrape : [],
+			// save : false,
 		}
+		this.save = this.save.bind(this);
 	}
-	// 	state = {
-	// 	response: '',
-	// 	post: '',
-	// 	responseToPost: '',
-	//   };
-	  
+
+	save(index) {
+		console.log(index.value);
+		console.log(this.state.scrape);
+		this.setState(state => ({
+		  save: true
+		}));
+	  }
+
 	componentDidMount() {
 
 		axios.get('http://localhost:8080/scrape')
@@ -50,6 +55,9 @@ class News extends Component {
 			// console.log("state", this.state.scrape);
 		})
 	}
+
+	
+	
 
 	render(){
 		// console.log("Here", this.state.scrape)
