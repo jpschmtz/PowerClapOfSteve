@@ -24,7 +24,7 @@ class Forum extends Component {
 						<Link to="/Announcements" className="forumTopic">
 							Announcements
 						</Link>
-						<p className = "topicDescription">Check here for any announcements for ______</p>
+						<p className = "topicDescription">Check here for any announcements for <strong>Continue to Code</strong></p>
 					</div>
 					<div className="topic">
 						<Link to="/Resources" className="forumTopic">
@@ -45,8 +45,8 @@ class Forum extends Component {
 						<p className = "topicDescription">Share your thoughts regarding anything and everything web development</p>
 					</div>
 					<div className="topic">
-						<Link to="/Applications" className="forumTopic">
-							Applications
+						<Link to="/sharework" className="forumTopic">
+							Share Your Work
 						</Link>
 						<p className = "topicDescription">Need advice or critique on your projects? Post them here and get feedback from the community!</p>
 					</div>
