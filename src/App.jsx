@@ -17,7 +17,6 @@ import './Assets/css/hover.css'
 
 const DisplayLinks = props => {
 		return (
-<<<<<<< HEAD
 			<div id="masterhead">
 
 			<div class="navContainer">
@@ -84,44 +83,6 @@ const DisplayLinks = props => {
 			// 			</Link>
 
 			// </nav>
-=======
-			<nav className="navbar">
-				<ul className="nav">
-					<li className="nav-item">
-						<Link to="/" className="nav-link">
-							Home
-						</Link>
-					</li>
-					<li>
-						<Link to="#" className="nav-link" onClick={props._logout}>
-							Logout
-						</Link>
-					</li>
-				</ul>
-			</nav>
-		)
-	} else {
-		return (
-			<nav className="navbar">
-				<ul className="nav">
-					<li className="nav-item">
-						<Link to="/" className="nav-link">
-							Home
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/login" className="nav-link">
-							Login
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/signup" className="nav-link">
-							Sign Up
-						</Link>
-					</li>
-				</ul>
-			</nav>
->>>>>>> f7f25f2663f5cf9dbdbb282a3f4ad72f85ca8c7b
 		)
 	}
 
@@ -189,15 +150,9 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-<<<<<<< HEAD
-
-				{/* <h1>This is the main App component</h1> */}
-				{/* <Header user={this.state.user} /> */}
-=======
 				<h1>Code Loop</h1>
 				<h2>Developing Developers</h2>
-				<Header user={this.state.user} />
->>>>>>> f7f25f2663f5cf9dbdbb282a3f4ad72f85ca8c7b
+				{/* <Header user={this.state.user} /> */}
 				{/* LINKS to our different 'pages' */}
 				<DisplayLinks _logout={this._logout} loggedIn={this.state.loggedIn} />
 				{/*  ROUTES */}
