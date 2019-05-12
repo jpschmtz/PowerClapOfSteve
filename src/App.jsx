@@ -96,7 +96,7 @@ class App extends Component {
 
 	_login(username, password) {
 		axios
-			.post('/auth/login', {
+			.post('/', {
 				username,
 				password
 			})
@@ -114,15 +114,9 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
-
-				{/* <h1>This is the main App component</h1> */}
-				{/* <Header user={this.state.user} /> */}
-				{/* LINKS to our different 'pages' */}
+			<div className="App">			
 				<DisplayLinks _logout={this._logout} loggedIn={this.state.loggedIn} />
-				{/*  ROUTES */}
-				{/* <Route exact path="/" component={Home} /> */}
-				{/* <Route exact path="/" render={() => <Home user={this.state.user} />} /> */}
+				
 				<Route exact path="/" component={Home} />
 
 				<Route
@@ -130,8 +124,7 @@ class App extends Component {
 					path="/login"
 					render={() =>
 						<LoginForm
-							_login={this._login}
-							_googleSignin={this._googleSignin}
+							_login={this._login}							
 						/>}
 				/>
 				<Route exact path="/signup" component={SignupForm} />
