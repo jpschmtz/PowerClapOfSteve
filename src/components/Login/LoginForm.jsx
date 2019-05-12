@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-// import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_disabled_web.png'
-import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png'
 import "../signup.css";
 
 class LoginForm extends Component {
@@ -37,35 +35,41 @@ class LoginForm extends Component {
 			return <Redirect to={{ pathname: this.state.redirectTo }} />
 		} else {
 			return (
-				<div className="formWrapper">
-				<div className="LoginForm">
-					<h1>Login form</h1>
-					<form>
-
-						<input
-							className = "formInput"
-							type="text"
-							name="email"
-							placeholder="Email Address"
-							value={this.state.email}
+				<div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <h1 class="text-center mb-3"><i class="fas fa-user-astronaut"></i>  Login</h1>
+             <form action="/users/login" method="POST">
+              <div class="form-group">
+                <label for="username">User Name</label>
+                <input
+				 className = "formInput"
+                  type="username"
+                //   id="username"
+                  name="username"                  
+				  placeholder="Enter User Name"
+				  value={this.state.username}
 							onChange={this.handleChange}
-						/>
-						<input
-							className = "formInput"
-							type="password"
-							name="password"
-							placeholder="Password"
-							value={this.state.password}
-							onChange={this.handleChange}
-						/>
-						<button onClick={this.handleSubmit}>Login</button>
-					</form>
-					<a href="/auth/google">
-						{/* <GoogleButton /> */}
-						<img src={googleButton} alt="sign into Google Button" />
-					</a>
-				</div>
-				</div>
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+				 className = "formInput"
+                  type="password"
+                //   id="password"
+                  name="password"                  
+                  placeholder="Enter Password"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <p class="lead mt-4">
+              No Account? <a href="#">Register</a>
+            </p>
+          </div>
+        </div>
+      </div>
 			)
 		}
 	}
