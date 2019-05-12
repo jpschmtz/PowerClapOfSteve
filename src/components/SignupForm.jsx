@@ -45,41 +45,65 @@ class SignupForm extends Component {
 			return <Redirect to={{ pathname: this.state.redirectTo }} />
 		}
 		return (
-			<div className="formWrapper">
-				<div className="SignupForm">
-					<h1>Signup form</h1>
-
-					<input
-						className = "formInput"
-						name="firstName"
-						type="text"
-						placeholder="First Name"
-					/>
-          			<input
-					  	className = "formInput"
-						name="lastName"
-						type="text"
-						placeholder="Last Name"
-          			/>
-					<input
-						className = "formInput"
-						type="text"
-						name="email"
-						placeholder="Email Address"
-						value={this.state.email}
-						onChange={this.handleChange}
-					/>
-					<input
-						className = "formInput"
-						type="password"
-						name="password"
-						placeholder="Password"
-						value={this.state.password}
-						onChange={this.handleChange}
-					/>
-					<button onClick={this.handleSubmit}>Sign up</button>
-				</div>
-			</div>
+			<div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <h1 class="text-center mb-3">
+              <i class="fas fa-user-plus"></i> Register
+            </h1>
+          
+            <form action="/users/register" method="POST">
+              <div class="form-group">
+                <label for="name">First Name</label>
+                <input
+					className = "formInput"
+					name="firstName"
+					type="text"
+					placeholder="First Name"        
+                //   id="name"     
+                />
+              </div>
+			  <div class="form-group">
+                <label for="name">Last Name</label>
+                <input
+					className = "formInput"
+					name="lastName"
+					type="text" 
+					placeholder="Last Name"       
+                //   id="name"     
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+				className = "formInput"
+				type="text"
+				name="email"
+				placeholder="Email Address"
+				value={this.state.email}
+				onChange={this.handleChange}                  
+                //   id="email"         
+                 />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+				className = "formInput"
+				type="password"
+				name="password"
+				placeholder="Password"
+				value={this.state.password}
+				onChange={this.handleChange}
+				// id="password"                             
+                />
+              </div>             
+			  <button type="submit" class="btn btn-primary btn-block" onClick={this.handleSubmit}>Sign up</button>              
+            </form>
+            <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
+          </div>
+        </div>
+      </div>
+      
 		)
 	}
 }

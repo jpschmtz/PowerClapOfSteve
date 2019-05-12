@@ -44,7 +44,7 @@ class LoginForm extends Component {
                 <label for="username">User Name</label>
                 <input
 				 className = "formInput"
-                  type="username"
+                  type="text"
                 //   id="username"
                   name="username"                  
 				  placeholder="Enter User Name"
