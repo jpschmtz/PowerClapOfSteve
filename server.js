@@ -18,9 +18,15 @@ var app = express();
 let PORT = process.env.PORT || 8080;
 
 if (process.env.NODE_ENV !== 'production') {
-  app.use(express.static("client/build"));
+  app.use(express.static("/build"));
 }
 
+// app.use(herokuProxy({
+//   hostname: 'localhost',
+//   port    : 8080,
+//   prefix  : 'heroku-api',
+//   protocol: 'http'
+// }));
 
 // Configure middleware
 
