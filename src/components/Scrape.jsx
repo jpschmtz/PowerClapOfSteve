@@ -10,7 +10,7 @@ class Scrape extends Component {
   }
 
   componentDidMount() {
-    fetch('/scrape')
+    fetch('/api/scrape')
       .then(response => response.json())
 			.then(data => this.setState({ data }));
   }
