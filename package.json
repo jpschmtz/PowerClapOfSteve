@@ -32,7 +32,7 @@
     "src": "cd src && npm start",
     "start": "node server.js",
     "server": "node server.js",
-    "heroku-postbuild": "react-scripts start",
+    // "heroku-postbuild": "react-scripts start",
     "eject": "react-scripts eject",
     "react": "react-scripts start",
     "dev": "concurrently \"react-scripts start\" \"nodemon server.js\" \"npm src\"",
