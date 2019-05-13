@@ -26,7 +26,7 @@ class News extends Component {
 
 	componentDidMount() {
 
-		axios.get('/api/scrape')
+		axios.get('https://powerclap0fsteve.herokuapp.com/api/scrape')
 		.then(result=>{
 			// console.log(result);
 			return result;

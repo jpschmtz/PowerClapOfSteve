@@ -19,7 +19,7 @@ const DisplayLinks = props => {
 		return (
 			<div id="masterhead">
 
-			<div class="navContainer">
+			<div className="navContainer">
 				<div>
 					<a href="/" id="logo">Continue to Code</a>
 				</div>
