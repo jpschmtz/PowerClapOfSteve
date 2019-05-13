@@ -53,7 +53,7 @@
   },
   "engines": {
     "node": "10.13.0",
-    "npm": "1.15.2"
+    "npm": "6.4.1"
   },
   "homepage": "https://github.com/jpschmtz/PowerClapOfSteve#readme",
   "browserslist": {
