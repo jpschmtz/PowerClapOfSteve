@@ -29,7 +29,7 @@
   },
   "scripts": {
     "src": "cd src && npm start",
-    "start": "concurrently \"react-scripts start\" \"nodemon server.js\" \"npm src\"",
+    "start": "nodemon server.js",
     "server": "nodemon server.js",
     "build": "nodemon server.js",
     "heroku-postbuild": "react-scripts start",
