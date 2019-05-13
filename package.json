@@ -14,7 +14,7 @@
     "express-session": "^1.15.4",
     "mongoose": "^4.11.4",
     "morgan": "^1.8.2",
-    "nodemon": "^1.19.0",
+    "node": "^1.19.0",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
     "passport-google-oauth20": "^1.0.0",
@@ -30,14 +30,14 @@
   },
   "scripts": {
     "src": "cd src && npm start",
-    "start": "nodemon server.js",
-    "server": "nodemon server.js",
-    "build": "nodemon server.js",
+    "start": "node server.js",
+    "server": "node server.js",
+    "build": "node server.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "react": "react-scripts start",
     "dev": "concurrently \"react-scripts start\" \"nodemon server.js\" \"npm src\"",
-    "prod": "export NODE_ENV=\"production\" && nodemon server/server.js"
+    "prod": "export NODE_ENV=\"production\" && node server/server.js"
   },
   "proxy": "http://localhost:8080",
   "description": "> example MERN stack application that uses authentication",
