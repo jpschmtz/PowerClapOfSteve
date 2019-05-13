@@ -32,7 +32,6 @@
     "start": "nodemon server.js",
     "server": "nodemon server.js",
     "build": "nodemon server.js",
-    "heroku-postbuild": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "react": "react-scripts start",
