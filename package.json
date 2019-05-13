@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "react-scripts": "1.0.7"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "src": "cd src && npm start",
@@ -55,5 +55,17 @@
     "node": "10.13.0",
     "npm": "1.15.2"
   },
-  "homepage": "https://github.com/jpschmtz/PowerClapOfSteve#readme"
+  "homepage": "https://github.com/jpschmtz/PowerClapOfSteve#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
