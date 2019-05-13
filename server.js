@@ -59,7 +59,7 @@ var results = [];
 // });
 
 // A GET route for scraping the TechCrunch website
-app.get("/scrape", function(req, res) {
+app.get("/api/scrape", function(req, res) {
   // db.Article.drop();
   // First, we grab the body of the html with axios
   axios.get("https://techcrunch.com/").then(function(response) {

@@ -26,7 +26,7 @@ class News extends Component {
 
 	componentDidMount() {
 
-		axios.get('/scrape')
+		axios.get('/api/scrape')
 		.then(result=>{
 			// console.log(result);
 			return result;
