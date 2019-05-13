@@ -35,7 +35,8 @@
     "eject": "react-scripts eject",
     "react": "react-scripts start",
     "dev": "concurrently \"react-scripts start\" \"nodemon server.js\" \"npm src\"",
-    "prod": "export NODE_ENV=\"production\" && node server/server.js"
+    "prod": "export NODE_ENV=\"production\" && node server/server.js",
+    "heroku-postbuild": "react-scripts start"
   },
   "proxy": "http://localhost:8080",
   "description": "> example MERN stack application that uses authentication",
