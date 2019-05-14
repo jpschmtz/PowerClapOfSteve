@@ -3,6 +3,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 // var request = require("request");
 var bodyParser = require("body-parser");
+var passport = require('./server/passport/index');
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
@@ -47,10 +48,14 @@ app.use(function(req, res, next) {
 
 
 // Connect to the Mongo DB HEROKU
-mongoose.connect("mongodb://Master:Password123@ds155516.mlab.com:55516/heroku_rlf28wdk", { useNewUrlParser: true });
+// mongoose.connect("mongodb://Master:Password123@ds155516.mlab.com:55516/heroku_rlf28wdk", { useNewUrlParser: true });
 // Connect to the Mongo DB Locally
-// mongoose.connect("mongodb://localhost/PowerClapOfSteve", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/PowerClapOfSteve", { useNewUrlParser: true });
 var results = [];
+
+// Passport
+app.use(passport.initialize())
+app.use(passport.session()) // calls the deserializeUser
 
 // Routes
 
