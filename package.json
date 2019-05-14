@@ -14,6 +14,7 @@
     "express-session": "^1.15.4",
     "mongoose": "^4.11.4",
     "morgan": "^1.8.2",
+    "node": "^12.2.0",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
     "passport-google-oauth20": "^1.0.0",
@@ -25,17 +26,16 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "react-scripts": "1.0.7"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "src": "cd src && npm start",
-    "start": "concurrently \"react-scripts start\" \"nodemon server.js\" \"npm src\"",
-    "server": "nodemon server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "node server.js",
+    "server": "node server.js",
     "eject": "react-scripts eject",
+    "react": "react-scripts start",
     "dev": "concurrently \"react-scripts start\" \"nodemon server.js\" \"npm src\"",
-    "prod": "export NODE_ENV=\"production\" && nodemon server/server.js"
+    "prod": "export NODE_ENV=\"production\" && node server/server.js"
   },
   "proxy": "http://localhost:8080",
   "description": "> example MERN stack application that uses authentication",
@@ -51,7 +51,19 @@
   },
   "engines": {
     "node": "10.13.0",
-    "npm": "1.15.2"
+    "npm": "6.4.1"
   },
-  "homepage": "https://github.com/jpschmtz/PowerClapOfSteve#readme"
+  "homepage": "https://github.com/jpschmtz/PowerClapOfSteve#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
