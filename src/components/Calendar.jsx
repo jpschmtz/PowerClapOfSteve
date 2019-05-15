@@ -3,6 +3,7 @@ import React from 'react'
 import Meetups from "react-meetup-meetups";
 import Image from '../Assets/Meetup2.jpg';
 import '../Assets/css/hover.css';
+import "./news.css";
 
 // TODO - add proptypes
 
@@ -19,9 +20,11 @@ const meetupsIds = [
 const fmtTime = time => new Date(time).toISOString().substring(0, 10);
 
 const Meetup = ({ time, name, event_url }) => (
-	<div>
-	  {fmtTime(time)} : <a href={event_url}>{name}</a>
-	</div>
+
+		<div className="datesCard">
+	  	{fmtTime(time)} : <a href={event_url}>{name}</a>
+		</div>
+
   );
   
   const renderMeetups = results => {
@@ -40,8 +43,8 @@ const Calendar = props => {
 						</div>
 
 						<div id="introCard">
-						  <h1>Hello Developers!</h1>
-						  <h2>Welcome to AppName</h2>
+						  <h1>Chicago Based</h1>
+						  <h2>Tech Meetups</h2>
 						</div>
 					</div>
 
@@ -53,6 +56,7 @@ const Calendar = props => {
 					render={renderMeetups}
 					loading={() => <div>Loading...</div>}
 				/>				</code>
+
 			</div>
 		)
 	} else {
@@ -65,19 +69,21 @@ const Calendar = props => {
 						</div>
 
 						<div id="introCard">
-						  <h1>Hello Developers!</h1>
-						  <h2>Welcome to AppName</h2>
+						  <h1>Chicago Based</h1>
+						  <h2>Tech Meetups</h2>
 						</div>
 					</div>
-
-				<p>Tech Meetups Near You:</p>
-				<code>
-				<Meetups
-				  apiKey={apiKey}
-					meetupsIds={meetupsIds}
-					render={renderMeetups}
-					loading={() => <div>Loading...</div>}
-				/>				</code>
+					<div className="datesWrapper">
+						<h2>Tech Meetups in Chicago:</h2>
+						<p>It's extremely important to meet individuals with similar intrests and hobbies. This will give you a chance to grow your network, which is crucial to succeeding in this industry. </p>
+						<code>
+						<Meetups
+							apiKey={apiKey}
+							meetupsIds={meetupsIds}
+							render={renderMeetups}
+							loading={() => <div>Loading...</div>}
+						/>				</code>
+					</div>
 			</div>
 		)
 	}

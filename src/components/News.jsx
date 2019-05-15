@@ -73,15 +73,20 @@ class News extends Component {
 						<img className="bannerImage" alt="forumImage" src={Image}/>
 						<div id="introCard">
 							<h1>News</h1>
-							<h5>Stay relevant by catching up on important news in the industry!</h5>
+							<h4>Stay relevant by catching up on important news in the industry!</h4>
 						</div>
 					</div>
 				</div>
+				<div className="introParagraph">
+				<h2>Daily Top Headlines</h2>
 				<p>It's extremely important to stay up-to-date with the latest news - especially in an industry that is contstantly evolving. Here, we bring you
 					some of the top headlines in the tech world! 
 				</p>
+				</div>
 				<div id="articlesWrapper">
+				<div className="articleCards">
 				{this.state.scrape}
+				</div>
 				</div>
 			</div>
 		)

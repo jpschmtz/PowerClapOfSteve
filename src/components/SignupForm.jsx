@@ -3,6 +3,8 @@ import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import "./signup.css";
 import Image from '../Assets/signup2.jpg'
+import '../Assets/css/hover.css';
+import { Link } from 'react-router-dom'
 
 class SignupForm extends Component {
 	constructor() {
@@ -51,13 +53,14 @@ class SignupForm extends Component {
 					<div id="intro">
 					<img className="bannerImage" alt="forumImage" src={Image}/>
 					<div id="introCard">
-					<h1>Forum</h1>
+					<h2>Sign Up For A</h2>
+					<h3>Continue To Code Account Below!</h3>
 					</div>
 					</div>
 				</div>
 			<div className="formWrapper">
 				<div className="SignupForm">
-					<h1>Signup form</h1>
+					<h1>Signup Form</h1>
 
 					<input
 						className = "formInput"
@@ -87,8 +90,13 @@ class SignupForm extends Component {
 						value={this.state.password}
 						onChange={this.handleChange}
 					/>
-					<button onClick={this.handleSubmit}>Sign up</button>
+					
+					<button onClick={this.handleSubmit} className="hvr-bounce-to-right">Sign up</button>
+
 				</div>
+				<Link to="/login" className="forumTopic">
+					Already Registered? Login Here!
+				</Link>
 			</div>
 			</div>
 		)
