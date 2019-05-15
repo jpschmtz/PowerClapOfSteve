@@ -3,6 +3,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 // var request = require("request");
 var bodyParser = require("body-parser");
+var passport = require('./server/passport/index');
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
@@ -18,9 +19,15 @@ var app = express();
 let PORT = process.env.PORT || 8080;
 
 if (process.env.NODE_ENV !== 'production') {
-  app.use(express.static("client/build"));
+  app.use(express.static("/build"));
 }
 
+// app.use(herokuProxy({
+//   hostname: 'localhost',
+//   port    : 8080,
+//   prefix  : 'heroku-api',
+//   protocol: 'http'
+// }));
 
 // Configure middleware
 
@@ -46,6 +53,10 @@ app.use(function(req, res, next) {
 mongoose.connect("mongodb://localhost/PowerClapOfSteve", { useNewUrlParser: true });
 var results = [];
 
+// Passport
+app.use(passport.initialize())
+app.use(passport.session()) // calls the deserializeUser
+
 // Routes
 
 // app.get("/", function(req, res) {
@@ -53,7 +64,7 @@ var results = [];
 // });
 
 // A GET route for scraping the TechCrunch website
-app.get("/scrape", function(req, res) {
+app.get("/api/scrape", function(req, res) {
   // db.Article.drop();
   // First, we grab the body of the html with axios
   axios.get("https://techcrunch.com/").then(function(response) {

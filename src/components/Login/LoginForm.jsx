@@ -54,6 +54,7 @@ class LoginForm extends Component {
 				
 				
 				<div className="formWrapper">
+
 					<div className="LoginForm">
 						<h1>Login Form</h1>
 						<form>
@@ -79,6 +80,7 @@ class LoginForm extends Component {
 							Not yet registered? Sign up here!
 						</Link>
 					</div>
+
 				</div>
 			</div>
 			)
