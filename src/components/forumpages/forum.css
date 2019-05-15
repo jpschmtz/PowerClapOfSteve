@@ -1,3 +1,34 @@
+h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  h3{
+    font-size: 25px;
+  }
+  
+  h4{
+    font-size: 20px;
+  }
+  
+  h5{
+    font-size: 15px;
+  }
+  
+  h6{
+    font-size: 10px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    color:#10455b;
+  }
+  .forumWrapper{
+    font-family: "Times New Roman", Times, serif;
+    color: #545558;
+    font-size: 16px;
+  }
 .topic{
     padding-top: 5px;
     border-bottom: 2px solid #2c637a;

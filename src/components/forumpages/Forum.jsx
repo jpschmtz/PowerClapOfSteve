@@ -14,12 +14,15 @@ class Forum extends Component {
 					<div id="intro">
 					<img className="bannerImage" alt="forumImage" src={Image}/>
 					<div id="introCard">
-					<h1>Forum</h1>
+					<h1>Continue to Code's</h1>
+					<h1>Community Forum</h1>
 					</div>
 					</div>
 				</div>
 
 				<div id="topicsWrapper">
+					<h1>Let's Have A Discussion!</h1>
+					<p>Here at Continue to Code, we believe that it's important to engange with our community. Our forum will give you the opportunity to do just that! Chat members to discuss the latest in tech, get feedback on your work, and build connections.</p>
 					<div className="topic">
 						<Link to="/Announcements" className="forumTopic">
 							Announcements

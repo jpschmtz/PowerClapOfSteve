@@ -1,9 +1,44 @@
+h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  h3{
+    font-size: 25px;
+  }
+  
+  h4{
+    font-size: 20px;
+  }
+  
+  h5{
+    font-size: 15px;
+  }
+  
+  h6{
+    font-size: 10px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    color:#10455b;
+  }
+  
+.forumWrapper{
+    padding:25px;
+}
 .topicIntro{
     border: 1px solid #10455b;
     padding:10px;
     border-radius: 5px;
 }
-
+.extraPosts{
+  border: 1px solid #10455b;
+  padding:10px;
+  border-radius: 5px;
+  margin:10px 0px;
+}
 .forumPost{
     width: 100%;
     padding:5px;
@@ -17,6 +52,14 @@
     margin-top: 5px;
 }
 
-/* .forumWrapper{
-    padding: 25px;
-} */
+.postInfo{
+  float:right;
+}
+.postHeading{
+  width:50%;
+  float: left;
+}
+.postContent{
+  clear:both;
+  padding:5px 0px;
+}

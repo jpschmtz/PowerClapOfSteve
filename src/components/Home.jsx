@@ -13,14 +13,14 @@ class Home extends Component {
 						</div>
 
 						<div id="introCard">
-						<h1>Hello Developers!</h1>
-						<h4>Welcome to Continue to Code!</h4>
+						<h1>Hello <br></br>Developers!</h1>
 						</div>
 					</div>
 
 
 
 				<div id="introParagraph">
+					<h1>Welcome to Continue to Code!</h1>
 					<p>Unfortunately, a college degree or bootcamp certifiate isn't going to cut it.
 						 As Developers, it is important to continuously sharpen your skills. Employers are willing to take a bet on someone who can learn as 
 						 they go and can persist through the everyday fustrations of being a developer. Here at <i>Continue to Code</i> we it
