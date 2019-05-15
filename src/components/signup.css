@@ -45,6 +45,7 @@ h1,h2,h3,h4,h5,h6{
   
   .formInput {
     width: 100%;
+    border: 1px solid #545558;
     Margin: 5px 0px;
   }
   
