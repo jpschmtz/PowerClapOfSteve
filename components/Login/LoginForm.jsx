@@ -19,6 +19,7 @@ class LoginForm extends Component {
 	}
 
 	handleChange(event) {
+		console.log(this.state.username);
 		this.setState({
 			[event.target.name]: event.target.value
 		})
@@ -34,6 +35,7 @@ class LoginForm extends Component {
 	}
 
 	render() {
+		console.log(this.state);
 		if (this.state.redirectTo) {
 			return <Redirect to={{ pathname: this.state.redirectTo }} />
 		} else {
@@ -56,10 +58,10 @@ class LoginForm extends Component {
 
 						<input
 							className = "formInput"
-							type="text"
-							name="email"
-							placeholder="Email Address"
-							value={this.state.email}
+							type="username"
+							name="username"
+							placeholder="User name"
+							value={this.state.username}
 							onChange={this.handleChange}
 						/>
 						<input

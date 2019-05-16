@@ -3,16 +3,18 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 // var request = require("request");
 var bodyParser = require("body-parser");
-var passport = require('./server/passport/index');
 
+// const flash = require('connect-flash');
+const session = require('express-session')
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
 var axios = require("axios");
 var cheerio = require("cheerio");
-
+var passport = require('./server/passport/index');
 // Require all models
 var db = require("./models");
+
 // Initialize Express
 var app = express();
 
@@ -46,19 +48,57 @@ app.use(function(req, res, next) {
 });
 
 
+// Sessions
+app.use(
+	session({
+	  secret: 'secret',
+	  resave: true,
+	  saveUninitialized: true
+	})
+  );
 
 // Connect to the Mongo DB HEROKU
-// mongoose.connect("mongodb://Master:Password123@ds155516.mlab.com:55516/heroku_rlf28wdk", { useNewUrlParser: true });
+mongoose.connect("mongodb://Master:Password123@ds155516.mlab.com:55516/heroku_rlf28wdk", { useNewUrlParser: true })
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));;
 // Connect to the Mongo DB Locally
-mongoose.connect("mongodb://localhost/PowerClapOfSteve", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/PowerClapOfSteve", { useNewUrlParser: true });
 var results = [];
 
-// Passport
-app.use(passport.initialize())
-app.use(passport.session()) // calls the deserializeUser
+
+// MIDDLEWARE
+// Passport 
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Routes
-
+// Login
+app.post(
+  '/auth/login',
+  function (req, res, next) {
+      console.log('routes/user.js, login, req.body: ');
+      console.log(req.body)
+      next()
+  },
+  passport.authenticate('local'),
+  (req, res) => {
+      console.log('logged in', req.user);
+      var userInfo = {
+          username: req.user.username
+      };
+      res.send(userInfo);
+  }
+)
+// app.post('/auth/login', (req, res, next) => {
+ 
+//     } console.log(req.body);
+//   // passport.authenticate('local', {
+//   //   successRedirect: '/dashboard',
+//   //   failureRedirect: '/users/login',
+//   //   failureFlash: true
+//   // })(req, res, next);
+// });
 // app.get("/", function(req, res) {
 //   res.render("index");
 // });
@@ -123,6 +163,20 @@ app.get("/articles", function(req, res) {
       res.json(err);
     });
 });
+
+// Routes
+// app.use('/', require('./server/routes/index.js'));
+// app.use('/users', require('./server/routes/user.js'));
+// // Connect flash
+// app.use(flash());
+
+// Global variables
+// app.use(function(req, res, next) {
+//   res.locals.success_msg = req.flash('success_msg');
+//   res.locals.error_msg = req.flash('error_msg');
+//   res.locals.error = req.flash('error');
+//   next();
+// });
 
 // // Route for grabbing a specific Article by id, populate it with it's note
 // app.get("/articles/:id", function(req, res) {

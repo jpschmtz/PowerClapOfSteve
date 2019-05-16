@@ -15,6 +15,7 @@ import Calendar from './components/Calendar'
 import News from './components/News.jsx'
 import './Assets/css/hover.css'
 
+
 const DisplayLinks = props => {
 		return (
 			<div id="masterhead">
