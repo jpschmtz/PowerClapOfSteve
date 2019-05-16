@@ -1,33 +1,30 @@
-### MERN + Passport.js
-> example MERN stack application that uses authentication
+## Continue to Code
+> Northwestern Coding Bootcamp Final Project 
+> Mongo, Express, React, Node (MERN) + Passport.js authentication
+> Deployed and hosted on Heroku
 
-* Mongo, Express, React, Node (MERN) + Passport.js for managing authentication
-* This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+* Social Fourm - Discuss the latest news
+* Event Calendar - View the current tech events taking place in Chicago
+* News Browser - Read and Save current new articles
+
+[View The Application](https://codingloopfrontend.herokuapp.com/).
 
 ## Demo
-![demo gif](./_screenshots/mern_passport_demo.gif)
+![demo gif](./_screenshots/giffy-pbj.gif)
 
-View the live version of this app here:
-[https://mern-passport.herokuapp.com/](https://mern-passport.herokuapp.com/)
 
-## Project Structure
-```
-|-- server/
-|  |-- server.js                            // The entry point for running the backend server locally, and main server for production
-|  |-- passport/                             // Configuration files used to connect to different machines or set settings
-|     |-- index.js                     // Overloads the passport object and defines serialize and deserialize
-|     |-- localStrategy.js            // Defines a local strategy
-|     |-- googleStrategy.js           // Defines google OAuth stratgey
-|     ....
-|  |-- db/                             
-|     |-- index.js                  // Configures the connection to the db
-|     |-- models/                   // represents data from our db, and defines schemas for each collection
-|        |-- user.js                // Schema for the User collection
-| -- src/                           // Entry for the React client side application
-```
+## Project Deplpyment
+
+This application contians the Backend deployment files and a "dummy" Frontend for testing.
+[The Frontend of this application is hosted on a sepreate repo] (https://codingloopfrontend.herokuapp.com/).
+
 
 ## Note
-* In order to set the google authentication up, you must register your app @ [https://console.developers.google.com](https://console.developers.google.com) & set `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET` as environmental variables
-* In development mode (i.e. `npm run dev`), OAuth google callback is not being proxied to the google servers. Therefore in order to test the google OAuth on your local machine do the following:
-1) `npm run build`
-2) `npm run prod`
+# Deployment Method for Local
+* Clone repo and in terminal:
+1) `npm run dev`
+
+# Deployment Method for editing Heroku
+* Clone Frontend and Backend repo and in terminal:
+1) For Backend Repo `npm run server`
+2) For Frontend Repo `npm run react`
