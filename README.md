@@ -20,11 +20,11 @@ This application contians the Backend deployment files and a "dummy" Frontend fo
 
 
 ## Note
-# Deployment Method for Local
+### Deployment Method for Local
 * Clone repo and in terminal:
 1) `npm run dev`
 
-# Deployment Method for editing Heroku
+### Deployment Method for editing Heroku
 * Clone Frontend and Backend repo and in terminal:
 1) For Backend Repo `npm run server`
 2) For Frontend Repo `npm run react`
