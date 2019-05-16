@@ -75,7 +75,7 @@ const Calendar = props => {
 					</div>
 					<div className="datesWrapper">
 						<h2>Tech Meetups in Chicago:</h2>
-						<p>It's extremely important to meet individuals with similar intrests and hobbies. This will give you a chance to grow your network, which is crucial to succeeding in this industry. </p>
+						<p>It's extremely important to meet individuals with similar iinterests and hobbies. This will give you a chance to grow your network, which is crucial to succeeding in this industry. </p>
 						<code>
 						<Meetups
 							apiKey={apiKey}
