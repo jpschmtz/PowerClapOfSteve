@@ -104,8 +104,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>Code Loop</h1>
-				<h2>Developing Developers</h2>
+				{/* <h1>Code Loop</h1>
+				<h2>Developing Developers</h2> */}
 				{/* <Header user={this.state.user} /> */}
 				{/* LINKS to our different 'pages' */}
 				<DisplayLinks _logout={this._logout} loggedIn={this.state.loggedIn} />
