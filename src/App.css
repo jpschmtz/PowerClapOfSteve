@@ -19,6 +19,34 @@
   to { transform: rotate(360deg); }
 }
 
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3{
+  font-size: 25px;
+}
+
+h4{
+  font-size: 20px;
+}
+
+h5{
+  font-size: 15px;
+}
+
+h6{
+  font-size: 10px;
+}
+h1,h2,h3,h4,h5,h6{
+  color:#10455b;
+
+}
+
 .navbar{
   width:100%
 }
@@ -31,19 +59,13 @@
   text-align: right;
 }
 
-#masterhead{
-    
+#masterhead{ 
   color: #67888d;
-  /* position: fixed;
-  top: 0;
-  left:0;
-  width: 100%; */
   overflow: hidden;
   background-color: #F9F9F9;
   padding:5px;
-  /* letter-spacing: 2px; */
   text-transform: uppercase;
-  /* font-weight: 10; */
+  font-weight: 10;
   z-index:99;
   box-sizing: border-box;
   
@@ -51,7 +73,7 @@
 }
 
 .navContainer{
-  width: 1000px;
+  width: 960px;
   margin:auto;
   
 }

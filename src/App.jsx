@@ -19,7 +19,7 @@ const DisplayLinks = props => {
 		return (
 			<div id="masterhead">
 
-			<div class="navContainer">
+			<div className="navContainer">
 				<div>
 					<a href="/" id="logo">Continue to Code</a>
 				</div>
@@ -53,36 +53,6 @@ const DisplayLinks = props => {
 	
 		</div>
 
-
-			// <nav className="navbar">
-
-			// 	<li id="logo">Continue to Code</li>
-
-			// 			<Link to="/" className="nav-link">
-			// 				Home
-			// 			</Link>
-
-			// 			<Link to="/news" className="nav-link">
-			// 				News
-			// 			</Link>
-
-			// 			<Link to="/calendar" className="nav-link">
-			// 				Events Calendar
-			// 			</Link>
-
-			// 			<Link to="/forum" className="nav-link">
-			// 				Forum
-			// 			</Link>
-
-			// 			<Link to="/login" className="nav-link">
-			// 				Login
-			// 			</Link>
-
-			// 			<Link to="/signup" className="nav-link">
-			// 				Sign Up
-			// 			</Link>
-
-			// </nav>
 		)
 	}
 
@@ -97,23 +67,7 @@ class App extends Component {
 		this._logout = this._logout.bind(this)
 		this._login = this._login.bind(this)
 	}
-	// componentDidMount() {
-	// 	axios.get('/auth/user').then(response => {
-	// 		console.log(response.data)
-	// 		if (!!response.data.user) {
-	// 			console.log('THERE IS A USER')
-	// 			this.setState({
-	// 				loggedIn: true,
-	// 				user: response.data.user
-	// 			})
-	// 		} else {
-	// 			this.setState({
-	// 				loggedIn: false,
-	// 				user: null
-	// 			})
-	// 		}
-	// 	})
-	// }
+
 
 	_logout(event) {
 		event.preventDefault()
@@ -150,8 +104,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>Code Loop</h1>
-				<h2>Developing Developers</h2>
+				{/* <h1>Code Loop</h1>
+				<h2>Developing Developers</h2> */}
 				{/* <Header user={this.state.user} /> */}
 				{/* LINKS to our different 'pages' */}
 				<DisplayLinks _logout={this._logout} loggedIn={this.state.loggedIn} />

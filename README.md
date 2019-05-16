@@ -20,8 +20,8 @@ View the live version of this app here:
 |     |-- googleStrategy.js           // Defines google OAuth stratgey
 |     ....
 |  |-- db/                             
-|     |-- index.js                  // Configures the connection to the database
-|     |-- models/                   // represents data from our database, and defines schemas for each collection
+|     |-- index.js                  // Configures the connection to the db
+|     |-- models/                   // represents data from our db, and defines schemas for each collection
 |        |-- user.js                // Schema for the User collection
 | -- src/                           // Entry for the React client side application
 ```

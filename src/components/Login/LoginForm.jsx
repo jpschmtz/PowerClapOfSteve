@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 // import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_disabled_web.png'
-import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png'
+// import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png'
 import "../signup.css";
 import Image from '../../Assets/login2.jpg'
+import '../../Assets/css/hover.css';
+import { Link } from 'react-router-dom'
 
 class LoginForm extends Component {
 	constructor() {
@@ -40,45 +42,47 @@ class LoginForm extends Component {
 			return (
 			<div>
 				<div id="bannerDiv">
-				<div id="intro">
-				<img className="bannerImage" alt="Login Banner" src={Image}/>
+					<div id="intro">
+						<img className="bannerImage" alt="Login Banner" src={Image}/>
+					</div>
+	
+					<div id="introCard">
+						<h1>Login</h1>
+						<h2>To Your Account Below</h2>
+					</div>
 				</div>
+				
+				
+				<div className="formWrapper">
 
-				<div id="introCard">
-				<h1>Login</h1>
-				<h2>Welcome to AppName</h2>
+					<div className="LoginForm">
+						<h1>Login Form</h1>
+						<form>
+							<input
+								className = "formInput"
+								type="text"
+								name="email"
+								placeholder="Email Address"
+								value={this.state.email}
+								onChange={this.handleChange}
+							/>
+							<input
+								className = "formInput"
+								type="password"
+								name="password"
+								placeholder="Password"
+								value={this.state.password}
+								onChange={this.handleChange}
+							/>
+							<button className="hvr-bounce-to-right" onClick={this.handleSubmit}>Login</button>
+						</form>
+						<Link to="/signup" className="forumTopic">
+							Not yet registered? Sign up here!
+						</Link>
+					</div>
+
 				</div>
 			</div>
-				<div className="formWrapper">
-				<div className="LoginForm">
-					<h1>Login form</h1>
-					<form>
-
-						<input
-							className = "formInput"
-							type="text"
-							name="email"
-							placeholder="Email Address"
-							value={this.state.email}
-							onChange={this.handleChange}
-						/>
-						<input
-							className = "formInput"
-							type="password"
-							name="password"
-							placeholder="Password"
-							value={this.state.password}
-							onChange={this.handleChange}
-						/>
-						<button onClick={this.handleSubmit}>Login</button>
-					</form>
-					<a href="/auth/google">
-						{/* <GoogleButton /> */}
-						<img src={googleButton} alt="sign into Google Button" />
-					</a>
-				</div>
-				</div>
-				</div>
 			)
 		}
 	}
