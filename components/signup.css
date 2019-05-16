@@ -1,0 +1,18 @@
+.formWrapper{
+    border: 2px solid #2aa1af;
+    border-radius: 2px;
+    padding: 20px;
+    width: 360px;
+    text-align: center;
+    margin: 0 auto;
+
+  }
+  .form {
+    margin: 20px;
+  
+  }
+  
+  .formInput {
+    width: 100%;
+  }
+  

@@ -1,0 +1,22 @@
+.topicIntro{
+    border: 1px solid #10455b;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.forumPost{
+    width: 100%;
+    padding:5px;
+    margin: 10px 0px;
+    border: 1px solid #10455b;
+    border-radius: 5px;
+}
+
+.postButton{
+    float: right;
+    margin-top: 5px;
+}
+
+/* .forumWrapper{
+    padding: 25px;
+} */

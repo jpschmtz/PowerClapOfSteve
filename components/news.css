@@ -1,0 +1,22 @@
+.articleTitle{
+    border: 1px solid black;
+    padding: 3px;
+    margin:10px;
+    width: 30%;
+    float: left;
+    height: 150px;
+    position: relative;
+    border-radius: 5px;
+
+}
+#articlesWrapper{
+    margin: auto;
+    background-color: black
+}
+
+.articleSave{
+    position:absolute;
+    right:0px;
+    bottom: 0px;
+    width:100%;
+}
